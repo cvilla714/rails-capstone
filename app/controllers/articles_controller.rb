@@ -23,7 +23,6 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    # @article = Article.new(article_params)
     @article = Article.new
     @article.author_id = current_user.id
     @article.title = article_params[:title]
@@ -49,7 +48,6 @@ class ArticlesController < ApplicationController
     @article.body = article_params[:body]
     @article.image = article_params[:image]
     respond_to do |format|
-      # if @article.update(article_params)
       if @article.save
         @article.categories.delete_all
         add_categories
@@ -81,8 +79,6 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    # params.require(:article).permit(:author_id, :title, :body, :image, :user_id,)
-    # params.require(:article).permit(:title, :body, :image, :categories)
     params.require(:article).permit(:title, :body, :image, :categories, categories: [])
   end
 
@@ -97,10 +93,6 @@ class ArticlesController < ApplicationController
       @article_category = ArticleCategory.create(category_id: category, article_id: @article.id)
       error << @article_category.validate! unless @article_category.validate
     end
-
-    # categories = article_params['categories']
-    # ArticleCategory.create(category_id: categories, article_id: @article.id)
-
     redirect_to articles_path, notice: error if error.any?
   end
 end
