@@ -1,5 +1,4 @@
 class Article < ApplicationRecord
-  # belongs_to :user
   belongs_to :author, class_name: 'User'
   has_many :likes, dependent: :destroy
 
@@ -10,4 +9,29 @@ class Article < ApplicationRecord
   validates :body, length: { maximum: 500 }
   validates :title, :body, presence: true
   validates :title, uniqueness: true
-end
+
+  def self.most_likes
+    if !Like.all.blank?
+      main = joins(:likes).group(:article_id).count.max_by do |_s, l|
+        l
+      end[0]
+
+      Article.find(main)
+    else
+      Article.find(1)
+    end
+  end
+
+  # def self.most_voted
+    # if !Vote.all.blank?
+      # top = joins(:votes).group(:article_id).count.max_by do |_k, v|
+        # v
+      # end[0]
+# 
+      # Article.find(top)
+    # else
+      # Article.find(1)
+    # end
+  # end
+
+  end
