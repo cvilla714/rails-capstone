@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :display_categories, only: %i[new edit create]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: %i[new edit create destroy]
   before_action :set_article, only: %i[show edit update destroy]
 
   # GET /articles
