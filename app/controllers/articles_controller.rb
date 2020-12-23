@@ -82,7 +82,8 @@ class ArticlesController < ApplicationController
   # Only allow a list of trusted parameters through.
   def article_params
     # params.require(:article).permit(:author_id, :title, :body, :image, :user_id,)
-    params.require(:article).permit(:title, :body, :image, :categories)
+    # params.require(:article).permit(:title, :body, :image, :categories)
+    params.require(:article).permit(:title, :body, :image, :categories, categories: [])
   end
 
   def display_categories
@@ -90,16 +91,16 @@ class ArticlesController < ApplicationController
   end
 
   def add_categories
-    # error = []
-    # categories = article_params['categories'][1..]
-    # categories.each do |category|
-    # @article_category = ArticleCategory.create(category_id: category, article_id: @article.id)
-    # error << @article_category.validate! unless @article_category.validate
-    # end
-    categories = article_params['categories']
-    ArticleCategory.create(category_id: categories, article_id: @article.id)
+    error = []
+    categories = article_params['categories'][1..]
+    categories.each do |category|
+      @article_category = ArticleCategory.create(category_id: category, article_id: @article.id)
+      error << @article_category.validate! unless @article_category.validate
+    end
 
-    # redirect_to articles_path
-    # notice: error if error.any?
+    # categories = article_params['categories']
+    # ArticleCategory.create(category_id: categories, article_id: @article.id)
+
+    redirect_to articles_path, notice: error if error.any?
   end
 end
