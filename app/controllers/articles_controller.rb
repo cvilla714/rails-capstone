@@ -1,11 +1,13 @@
 class ArticlesController < ApplicationController
   before_action :display_categories, only: %i[new edit create]
+  before_action :authenticate_user!
   before_action :set_article, only: %i[show edit update destroy]
 
   # GET /articles
   # GET /articles.json
   def index
     @articles = Article.all
+    @most_likes = Article.all.most_likes
   end
 
   # GET /articles/1
