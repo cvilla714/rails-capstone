@@ -2,6 +2,7 @@
 
 <h1>Articles</h1>
 
+
 <table>
   <thead>
     <tr>
@@ -14,6 +15,7 @@
   </thead>
 
   <tbody>
+      <%= @most_likes.title %>
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.author.name %></td>
