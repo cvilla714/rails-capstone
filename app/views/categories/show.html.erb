@@ -16,7 +16,7 @@
 
 <ul>
   <li><% @articles.each do |art|%></li>
-  <li><%= link_to art.title,article_path %></li>
+  <li><%= link_to art.title,article_path(art.id) %></li>
   <li><%= art.author_id%></li>
   <% end %>
 </ul>
