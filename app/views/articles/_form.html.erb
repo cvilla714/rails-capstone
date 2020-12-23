@@ -41,11 +41,18 @@
   <%#= form.text_field :user_id,value:current_user.id %>
   <%# </div> %>
 
-  <div class="field">
-  <%= form.label :category_id%>
-  <%=form.select(:categories,@categories.collect {|co| [co.name,co.id]})%>
-  </div>
-  
+  <%# <div class="field"> %>
+  <%# form.label :category_id%>
+  <%#form.select(:categories,@categories.collect {|co| [co.name,co.id]},
+   { :multiple => true, :size => 5}) %>
+  <%# </div> %>
+
+    <div class="field">
+    <%= form.label :category_id%>
+    <%= form.select(:categories, @categories.collect {|p| [ p.name, p.id ] }, 
+                                           { :prompt => "Please select"}, 
+                                           { :multiple => true, :size => 5 }) %>
+      </div>
   <div class="actions">
     <%= form.submit %>
   </div>
