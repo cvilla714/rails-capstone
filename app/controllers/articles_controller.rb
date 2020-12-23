@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :display_categories, only: %i[new create]
+  before_action :display_categories, only: %i[new edit create]
   before_action :set_article, only: %i[show edit update destroy]
 
   # GET /articles
@@ -23,7 +23,12 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
+    # @article = Article.new(article_params)
+    @article = Article.new
+    @article.author_id = current_user.id
+    @article.title = article_params[:title]
+    @article.body = article_params[:body]
+    @article.image = article_params[:image]
     respond_to do |format|
       if @article.save
         add_categories
@@ -39,8 +44,13 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+    @article.author_id = current_user.id
+    @article.title = article_params[:title]
+    @article.body = article_params[:body]
+    @article.image = article_params[:image]
     respond_to do |format|
-      if @article.update(article_params)
+      # if @article.update(article_params)
+      if @article.save
         @article.categories.delete_all
         add_categories
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
@@ -71,7 +81,8 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params.require(:article).permit(:author_id, :title, :body, :image, :user_id, :categories)
+    # params.require(:article).permit(:author_id, :title, :body, :image, :user_id,)
+    params.require(:article).permit(:title, :body, :image, :categories)
   end
 
   def display_categories
@@ -79,13 +90,16 @@ class ArticlesController < ApplicationController
   end
 
   def add_categories
-    error = []
-    categories = article_params['categories'][1..]
-    categories.each do |category|
-      @article_category = ArticleCategory.create(category_id: category, article_id: @article.id)
-      error << @article_category.validate! unless @article_category.validate
-    end
+    # error = []
+    # categories = article_params['categories'][1..]
+    # categories.each do |category|
+    # @article_category = ArticleCategory.create(category_id: category, article_id: @article.id)
+    # error << @article_category.validate! unless @article_category.validate
+    # end
+    categories = article_params['categories']
+    ArticleCategory.create(category_id: categories, article_id: @article.id)
 
-    redirect_to articles_path, notice: error if error.any?
+    # redirect_to articles_path
+    # notice: error if error.any?
   end
 end
