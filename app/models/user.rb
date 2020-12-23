@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   validates :name, presence: true
+  validates :name, :email, uniqueness: true
+
 
   def first_name
     name.split.first
