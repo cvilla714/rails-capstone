@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :display_categories, only: %i[new create]
   before_action :set_article, only: %i[show edit update destroy]
 
   # GET /articles
@@ -23,9 +24,9 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
     respond_to do |format|
       if @article.save
+        add_categories
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
@@ -40,6 +41,8 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
+        @article.categories.delete_all
+        add_categories
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
         format.json { render :show, status: :ok, location: @article }
       else
@@ -68,6 +71,21 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params.require(:article).permit(:author_id, :title, :body, :image, :user_id)
+    params.require(:article).permit(:author_id, :title, :body, :image, :user_id, :categories)
+  end
+
+  def display_categories
+    @categories = Category.all.order(:name)
+  end
+
+  def add_categories
+    error = []
+    categories = article_params['categories'][1..]
+    categories.each do |category|
+      @article_category = ArticleCategory.create(category_id: category, article_id: @article.id)
+      error << @article_category.validate! unless @article_category.validate
+    end
+
+    redirect_to articles_path, notice: error if error.any?
   end
 end
