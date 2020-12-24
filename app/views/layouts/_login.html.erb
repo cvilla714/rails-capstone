@@ -1,0 +1,5 @@
+<% if current_user.is_a?(User) %>
+<li class="nav-item">
+  <%= link_to 'New Article',new_article_path, class:"nav-link" %>
+</li>
+<% end %>
