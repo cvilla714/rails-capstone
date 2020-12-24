@@ -19,6 +19,5 @@
   <%=@most_recent_article[0].title %>
   <% @articles.each do |art|%>
   <li><%= link_to art.title,article_path(art.id) %></li>
-  <li><%= art.author_id%></li>
   <% end %>
 </ul>
