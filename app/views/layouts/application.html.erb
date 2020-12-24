@@ -15,9 +15,7 @@
     <div class="container-fluid">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p> 
-
-      <h1>Hi <%=current_user.first_name%></h1>
-        <%= login_helper %>
+      
         <%= yield %>
     </div>
   </body>
