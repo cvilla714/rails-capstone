@@ -11,11 +11,20 @@
       <li class="nav-item active">
         <%= link_to 'Home',root_path,class:"nav-link active"%>
       </li>                
+
        <%= render :partial=> 'layouts/login' %>
+       
+        <% category_list.each do |cate| %>
+          <li class="nav-item active">
+        <%= link_to cate.name, category_path(cate.id), class:"nav-link active" %>
+        </li>
+        <% end %>
+       <%# login %>
     </ul>
       
       <ul class="navbar-nav ml-auto">
       <%= render :partial=> 'layouts/logout' %>
+      <%#logout %>
       </ul>
   </div>
 </nav>
