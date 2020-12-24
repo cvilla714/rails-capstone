@@ -16,7 +16,7 @@
 
 <ul>
   <%# @most_recent_article.inspect %>
-  <%=@most_recent_article[0].title %>
+  <%=link_to @most_recent_article[0].title,article_path(@most_recent_article[0].id) %>
   <% @articles.each do |art|%>
   <li><%= link_to art.title,article_path(art.id) %></li>
   <% end %>
