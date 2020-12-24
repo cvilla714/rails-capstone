@@ -5,18 +5,17 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
     <ul class="navbar-nav mr-auto">
+    
       <li class="nav-item active">
         <%= link_to 'Home',root_path,class:"nav-link active"%>
-      </li>
+      </li>                
+       <%= render :partial=> 'layouts/login' %>
     </ul>
+      
       <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <%= link_to 'Login',new_user_session_path,class:"nav-link active d-flex justify-content-end"%>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Register',new_user_registration_path,class:"nav-link d-flex justify-content-end"%>
-      </li>
+      <%= render :partial=> 'layouts/logout' %>
       </ul>
   </div>
 </nav>
