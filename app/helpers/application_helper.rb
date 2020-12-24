@@ -17,4 +17,30 @@ module ApplicationHelper
       link_to('Like!', article_likes_path(article_id: article.id), method: :post)
     end
   end
+
+  def login
+    if current_user.is_a?(User)
+      "<li class=\"nav-item\">
+      #{link_to 'New Article', new_article_path, class: 'nav-link'}
+      </li>"
+      end
+  end
+
+  def logout
+    if current_user.is_a?(User)
+      "<li class=\"nav-item\">
+        <h1>Hi \"#{current_user.first_name}\"</h1>
+      </li>"
+      "<li class=\"nav-item\">
+        #{link_to 'Log out', destroy_user_session_path, method: :delete, class: 'nav-link'}
+      </li>"
+    else
+      "<li class=\"nav-item\">
+          #{link_to 'Login', new_user_session_path, class: 'nav-link active'}
+        </li>"
+      "<li class=\"nav-item\">
+          #{link_to 'Register', new_user_registration_path, class: 'nav-link'}
+        </li>"
+    end
+  end
 end
