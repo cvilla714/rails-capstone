@@ -12,6 +12,9 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @articles = @category.articles
+    # @most_recent_article = Category.all.most_recent_article
+    # @most_recent_article = @articles.most_recent_article
+    @most_recent_article = @articles.most_recents
   end
 
   # GET /categories/new
