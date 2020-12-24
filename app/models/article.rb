@@ -22,16 +22,7 @@ class Article < ApplicationRecord
     end
   end
 
-  # def self.most_voted
-    # if !Vote.all.blank?
-      # top = joins(:votes).group(:article_id).count.max_by do |_k, v|
-        # v
-      # end[0]
-# 
-      # Article.find(top)
-    # else
-      # Article.find(1)
-    # end
-  # end
-
+  def self.most_recents
+    Article.order(created_at: :desc)
+  end
   end
