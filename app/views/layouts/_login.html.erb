@@ -1,6 +1,8 @@
 <% if current_user.is_a?(User) %>
-<li class="nav-item">
-  <%= link_to 'New Article',new_article_path, class:"nav-link" %>
-  <%# render :partial=> 'categories/list_categories' %>
-</li>
+  <li class="nav-item">
+    <%= link_to 'Add Article',new_article_path, class:"nav-link" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Add Category',new_category_path,class:"nav-link" %>
+  </li>
 <% end %>
