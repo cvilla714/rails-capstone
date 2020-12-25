@@ -3,7 +3,6 @@
 
 <p>
   <strong>Author:</strong>
-  <%# @article.author_id %>
   <%= @article.author.name %>
 </p>
 
@@ -19,7 +18,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @article.image %>
+  <img src='<%= @article.image %>' />
 </p>
 
 <p>
