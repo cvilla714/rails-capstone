@@ -15,13 +15,15 @@
   </thead>
 
   <tbody>
-      <%= @most_likes.title %>
+      <%# @most_likes.title %>
+      <img src='<%= @most_likes.image %>' /> <br>
+      <%=link_to @most_likes.title,article_path(@most_likes.id) %>
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.author.name %></td>
         <td><%= article.title %></td>
         <td><%= article.body %></td>
-        <td><%= article.image %></td>
+        <td><img src='<%= article.image %>' /></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
