@@ -15,6 +15,13 @@ class CategoriesController < ApplicationController
     # @most_recent_article = Category.all.most_recent_article
     # @most_recent_article = @articles.most_recent_article
     @most_recent_article = @articles.most_recents
+    @category = Category.find(params[:id])
+    @articles = @category.articles.most_recents.includes([:author])
+    if @articles.blank?
+      redirect_to root_path, notice: 'There are no articles on this category yet'
+    else
+      @most_recent_article = @articles.most_recents
+    end
   end
 
   # GET /categories/new
