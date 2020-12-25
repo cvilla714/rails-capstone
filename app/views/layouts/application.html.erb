@@ -13,11 +13,9 @@
   <body>
     <%= render :partial=> 'layouts/navbar' %>
     <div class="container-fluid">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> 
-      
         <%= yield %>
     </div>
+    <%= render :partial=> 'layouts/footer' %>
   </body>
 </html>
 
