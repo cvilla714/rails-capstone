@@ -5,12 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :articles, foreign_key: :author_id, source: :articles
-  # has_many :articles
   has_many :likes, dependent: :destroy
 
   validates :name, presence: true
   validates :name, :email, uniqueness: true
-
 
   def first_name
     name.split.first
