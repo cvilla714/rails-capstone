@@ -13,7 +13,6 @@ class LikesController < ApplicationController
 
   def destroy
     like = Like.find_by(id: params[:id], user: current_user, article_id: params[:article_id])
-    # like = Like.find(params[:id])
     if like
       like.destroy
       redirect_to articles_path, notice: 'You disliked an article.'
