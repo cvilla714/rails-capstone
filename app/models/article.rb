@@ -6,7 +6,7 @@ class Article < ApplicationRecord
   has_many :categories, through: :article_categories, source: :category
 
   validates :title, length: { in: 6..100 }
-  validates :body, length: { maximum: 5000}
+  validates :body, length: { maximum: 5000 }
   validates :title, :body, presence: true
   validates :title, uniqueness: true
 
@@ -23,6 +23,6 @@ class Article < ApplicationRecord
   end
 
   def self.most_recents
-    Article.order(created_at: :asc)
+    Article.order(created_at: :desc)
   end
   end
