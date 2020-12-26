@@ -1,6 +1,6 @@
 class LikesController < ApplicationController
   before_action :authenticate_user!, only: %i[create destroy]
-  
+
   def create
     @like = current_user.likes.new(article_id: params[:article_id])
 
@@ -9,7 +9,7 @@ class LikesController < ApplicationController
     else
       redirect_to articles_path, alert: 'You cannot like this article.'
     end
-   end
+  end
 
   def destroy
     like = Like.find_by(id: params[:id], user: current_user, article_id: params[:article_id])

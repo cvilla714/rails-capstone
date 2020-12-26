@@ -6,7 +6,7 @@ module ApplicationHelper
       (link_to 'Sign In', new_user_session_path) +
         '<br/>'.html_safe +
         (link_to 'Register', new_user_registration_path)
-        end
+    end
   end
 
   def like_or_dislike_btn(article)
