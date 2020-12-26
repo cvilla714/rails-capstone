@@ -72,37 +72,3 @@
 </div>
 
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Author</th>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <%# @most_likes.title %>
-      <img src='<%= @most_likes.image %>' /> <br>
-      <%=link_to @most_likes.title,article_path(@most_likes.id) %>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.author.name %></td>
-        <td><%= article.title %></td>
-        <td><%= article.body %></td>
-        <td><img src='<%= article.image %>' /></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= like_or_dislike_btn(article) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
