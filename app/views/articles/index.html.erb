@@ -20,7 +20,7 @@
           <%=link_to soccer_category.most_recent_article[-1].title,article_path(soccer_category.most_recent_article[-1].id) %>
         </div>
         <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <small class="text-muted">Published <%= distance_of_time_in_words(soccer_category.most_recent_article[-1].created_at,Time.now)%></small>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
             <%=link_to nba_category.most_recent_article[-1].title,article_path(nba_category.most_recent_article[-1].id) %>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Published <%= distance_of_time_in_words(nba_category.most_recent_article[-1].created_at,Time.now)%></small>
           </div>
       </div>
      
@@ -42,7 +42,7 @@
             <%=link_to nfl_category.most_recent_article[-1].title,article_path(nfl_category.most_recent_article[-1].id) %>
           </div>
           <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small class="text-muted">Published <%= distance_of_time_in_words(nfl_category.most_recent_article[-1].created_at,Time.now)%></small>
           </div>
       </div>
 
@@ -53,7 +53,7 @@
             <%=link_to mlb_category.most_recent_article[-1].title,article_path(mlb_category.most_recent_article[-1].id) %>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+            <small class="text-muted">Published <%= distance_of_time_in_words(mlb_category.most_recent_article[-1].created_at,Time.now)%></small>
           </div>
       </div>
       
@@ -64,11 +64,12 @@
           <%=link_to nhl_category.most_recent_article[-1].title,article_path(nhl_category.most_recent_article[-1].id) %>
         </div>
         <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <small class="text-muted">Published <%= distance_of_time_in_words(nhl_category.most_recent_article[-1].created_at,Time.now)%></small>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
