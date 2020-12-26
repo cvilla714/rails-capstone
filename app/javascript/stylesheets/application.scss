@@ -1,10 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 @import "@fortawesome/fontawesome-free";
 
-
 img {
-  width:100%;
-  height:50%;
+  width: 100%;
+  height: 50%;
   object-fit: cover;
 }
 
@@ -13,11 +12,11 @@ img {
 }
 
 .inside{
-  width:100%;
-  height:160%;
+  width: 100%;
+  height: 160%;
   object-fit: cover;
 }
 
 .artimg{
-  overflow:hidden;
+  overflow: hidden;
 }
