@@ -13,15 +13,38 @@
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
 
-
 <ul>
   <%# @most_recent_article.inspect %>
   <%# @most_recent_article %>
    <%# @most_recent_article[-1].image %>
-
-
   <%=link_to @most_recent_article[-1].title,article_path(@most_recent_article[-1].id) %>
-  <% @articles.each do |art|%>
-  <li><%= link_to art.title,article_path(art.id) %></li>
-  <% end %>
 </ul>
+        
+
+
+
+<div class="d-flex justify-content-start">
+<% @articles.each do |art|%>
+<div class="card col-12 col-md-6 artimg">
+  <div class="row no-gutters">
+    <div class="col-md-6">
+      <img class="inside" src='<%= art.image %>' ><br/>
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title"><%= art.title %></h5>
+        <p class="card-text"><%= truncate(art.body, length: 200) %></p>
+        <p class="card-text"><small class="text-muted"><%= link_to 'Read More',article_path(art.id) %> </small></p>
+        <%= render 'show_links',article: art %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+
+        
+        
+        
+        
+      
