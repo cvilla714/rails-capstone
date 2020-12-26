@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
 
-<table>
-  <thead>
+<h1 class="text-center">Categories</h1>
+
+<table  class="table">
+  <thead class="thead-dark text-center">
     <tr>
       <th>Name</th>
       <th>Priority</th>
@@ -11,7 +12,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="text-center">
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
@@ -26,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Category', new_category_path %>
+<%= link_to 'New Category', new_category_path,class:"btn btn-info" %>
