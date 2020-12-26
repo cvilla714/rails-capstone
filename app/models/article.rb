@@ -23,6 +23,6 @@ class Article < ApplicationRecord
   end
 
   def self.most_recents
-    Article.order(created_at: :desc)
+    Article.order(created_at: :asc)
   end
   end
