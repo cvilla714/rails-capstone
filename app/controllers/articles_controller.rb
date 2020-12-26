@@ -8,6 +8,8 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @most_likes = Article.all.most_likes
+    @most_recent_article = @articles.most_recents
+    @categories = Category.all
   end
 
   # GET /articles/1
