@@ -24,7 +24,7 @@
   
   <div class="card">
   <h1 class="text-center"><%= soccer_category.name %></h1>
-    <img src='<%= nba_category.most_recent_article[-1].image %>' />
+    <img src='<%= soccer_category.most_recent_article[-1].image %>' />
     <div class="card-body">
       <%=link_to soccer_category.most_recent_article[-1].title,article_path(soccer_category.most_recent_article[-1].id) %>
     </div>
