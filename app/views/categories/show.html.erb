@@ -17,6 +17,8 @@
 <ul>
   <%# @most_recent_article.inspect %>
   <%# @most_recent_article %>
+   <%# @most_recent_article[-1].image %>
+
 
   <%=link_to @most_recent_article[-1].title,article_path(@most_recent_article[-1].id) %>
   <% @articles.each do |art|%>
