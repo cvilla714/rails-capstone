@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   before_action :display_categories, only: %i[new edit create]
   before_action :authenticate_user!, only: %i[new edit create destroy]
   before_action :set_article, only: %i[show edit update destroy]
+  before_action :validate_categories, only: %i[create update]
 
   # GET /articles
   # GET /articles.json
@@ -24,6 +25,14 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit; end
 
+  def validate_categories
+    if article_params[:categories][0].blank?
+      unless article_params[:categories][1]
+        redirect_to articles_path, notice: 'Article not saved. Please add a category'
+      end
+    end
+  end
+
   # POST /articles
   # POST /articles.json
   def create
@@ -32,10 +41,11 @@ class ArticlesController < ApplicationController
     @article.title = article_params[:title]
     @article.body = article_params[:body]
     @article.image = article_params[:image]
-    @category = category_params[:id]
-    @article.categories = article.category_ids
+    @categories = Category.all
+    @article.categories = @article.category_ids
     respond_to do |format|
       if @article.save
+        @article.categories.delete_all
         add_categories
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }

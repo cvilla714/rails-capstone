@@ -7,8 +7,7 @@ class Article < ApplicationRecord
 
   validates :title, length: { in: 6..100 }
   validates :body, length: { maximum: 5000 }
-  validates :title, :body, :image, :categories, presence: true
-  validates :title, uniqueness: true
+  validates :title, :body, :image, presence: true
 
   def self.most_likes
     if !Like.all.blank?
@@ -18,7 +17,8 @@ class Article < ApplicationRecord
 
       Article.find(main)
     else
-      Article.find(1)
+      Article.first
+      # Article.find(1)
     end
   end
 
