@@ -32,7 +32,8 @@
         <h5 class="card-title"><%= art.title %></h5>
         <p class="card-text"><%= truncate(art.body, length: 200) %></p>
         <p class="card-text"><small class="text-muted"><%= link_to 'Read More',article_path(art.id) %> </small></p>
-        <%= render 'show_links',article: art %>
+        <%# render 'show_links',article: art %>
+        <%= edit_content(art) %>
       </div>
     </div>
   </div>
