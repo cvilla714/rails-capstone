@@ -1,22 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class="main container">
+<h3 class="text-center">
   <strong>Name:</strong>
   <%= @category.name %>
-</p>
+</h3>
 
-<p>
+<h3 class="text-center">
   <strong>Priority:</strong>
   <%= @category.priority %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
-
-<ul>
+</h3>
+<hr/>
+<h1 class="text-center">
   <%=link_to @most_recent_article[-1].title,article_path(@most_recent_article[-1].id) %>
-</ul>
-        
+</h1>
+<hr/>    
 
 <div class="d-flex flex-wrap justify-content-start">
 <% @articles.each do |art|%>
@@ -37,7 +35,10 @@
 </div>
 <% end %>
 </div>
-
+<br/>
+<%= link_to 'Edit', edit_category_path(@category),class:"btn btn-info" %>
+<%= link_to 'Back', categories_path,class:"btn btn-info" %>
+</div>
         
         
         

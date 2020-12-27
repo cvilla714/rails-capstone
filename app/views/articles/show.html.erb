@@ -1,36 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-
-<p>
+<div class="main container">
+<h2>
   <strong>Author:</strong>
   <%= @article.author.name %>
-</p>
+</h2>
 
-<p>
+<h2>
   <strong>Title:</strong>
   <%= @article.title %>
-</p>
+</h2>
+
+<hr/>
 
 <p class="mx-2 ">
   <%= @article.body %>
 </p>
 
 <p>
-  <strong>Image:</strong>
+  
   <img src='<%= @article.image %>' />
 </p>
 
-<p>
+<h2>
   <strong>Likes:</strong>
   <%= @article.likes.count %>
-</p>
+</h2>
 
-<p>
+<h2>
   <strong>categories:</strong>
   <% @article.categories.each do |cat| %>
     <%= cat.name %>
     <% end %>
-</p>
+</h2>
 
 <%= link_to 'Edit', edit_article_path(@article),class:"btn btn-info" %> |
 <%= link_to 'Back', articles_path,class:"btn btn-info" %>
+</div>
