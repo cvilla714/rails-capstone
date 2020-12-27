@@ -18,7 +18,7 @@
 </ul>
         
 
-<div class="d-flex justify-content-start">
+<div class="d-flex flex-wrap justify-content-start">
 <% @articles.each do |art|%>
 <div class="card col-12 col-md-6 artimg">
   <div class="row no-gutters">
@@ -28,7 +28,7 @@
     <div class="col-md-6">
       <div class="card-body">
         <h5 class="card-title"><%= art.title %></h5>
-        <p class="card-text"><%= truncate(art.body, length: 200) %></p>
+        <p class="card-text m-3 border"><%= truncate(art.body, length: 200) %></p>
         <p class="card-text"><small class="text-muted"><%= link_to 'Read More',article_path(art.id) %> </small></p>
         <%= edit_content(art) %>
       </div>
