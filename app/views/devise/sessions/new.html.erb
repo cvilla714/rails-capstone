@@ -4,7 +4,8 @@
   </div>
   <div class="card-body">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  
+  <%= render "layouts/error_login" %>
+
   <div class="field form-group">
     <% f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control",placeholder:"Email" %>
