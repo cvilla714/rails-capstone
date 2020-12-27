@@ -7,7 +7,7 @@ class Article < ApplicationRecord
 
   validates :title, length: { in: 6..100 }
   validates :body, length: { maximum: 5000 }
-  validates :title, :body, presence: true
+  validates :title, :body, :image, :categories, presence: true
   validates :title, uniqueness: true
 
   def self.most_likes
