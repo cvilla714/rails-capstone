@@ -18,4 +18,10 @@ module ArticlesHelper
   def nhl_category
     Category.find(5)
   end
+
+  def edit_content(article)
+    return ' ' unless current_user.id == article.author_id
+
+    render 'categories/show_links',  article:article
+    end
 end
