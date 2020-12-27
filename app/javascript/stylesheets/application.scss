@@ -1,6 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 @import "@fortawesome/fontawesome-free";
 
+body {
+      background-color: rgb(78, 67, 61);
+}
+
 img {
   width: 100%;
   height: 50%;
@@ -20,3 +24,13 @@ img {
 .artimg {
   overflow: hidden;
 }
+
+.main {
+  background-color: rgb(255, 255, 255);
+}
+
+.forms {
+  width: 50vw;
+  height: 50vh;
+}
+
