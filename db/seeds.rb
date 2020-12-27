@@ -35,7 +35,8 @@ Article.create(author_id:1,title:"James Harden must quarantine until Friday",bod
     Video of the disgruntled star surfaced on social media, where he was shown without a mask at a crowded party in a private event space Monday night.
     Harden, in a since-deleted Instagram post, explained why he was at the event.
     He wrote: “One thing after another. I went to show love to my homegirl at her event (not a strip club) because she is becoming a boss and putting her people in a position of success and now it’s a problem. Everyday it’s something different. No matter how many times people try to drag my name under you can’t. The real people always end up on top.
-    ",image: 'https://cdn.nba.com/manage/2020/12/USATSI_15328129-scaled-e1608840678492-784x452.jpg')
+    ",image: 'https://cdn.nba.com/manage/2020/12/USATSI_15328129-scaled-e1608840678492-784x452.jpg',
+    category_id:2)
 
 
 
@@ -48,7 +49,9 @@ But nothing satisfies the hunger like Friday’s Christmas Day showcase, a rice-
 You could put together a first and second All-NBA team with the star power that will be in uniform around the country, including Kia MVP’s past, present and future, as well as champions and Finals MVPs of the same ilk.
 Nine players who earned All-NBA honors last season are scheduled to hit the floor and that doesn’t include Brooklyn’s two-time Finals MVP Kevin Durant and Kyrie Irving or New Orleans Pelicans’ sensation Zion Williamson, three of the biggest and most recognizable stars in the NBA’s global universe.
 The NBA’s scheduling Santa has delivered the goods as usual; not even a global pandemic could disrupt this holiday tradition, which gets under way early in the day and will keep you locked in until for hours.",
-image: 'https://cdn.nba.com/manage/2020/01/GettyImages-1180763594-scaled-e1608823013222-784x432.jpg')
+image: 'https://cdn.nba.com/manage/2020/01/GettyImages-1180763594-scaled-e1608823013222-784x432.jpg',
+category_id:2)
+
 
 Article.create(
 author_id:3,
@@ -60,7 +63,8 @@ Despite what the optics are beginning to suggest, however, Gruden coyly said Thu
 Gruden added that Carr showed a lot of good things over the past two practices after being limited on Tuesday, and that Carr progress makes him optimistic that he will be ready to go. Carr was also a full participant during Wednesday  practice.
 After Carr left Las Vegas' matchup against L.A. in the first quarter, backup Marcus Mariota came on and looked fantastic in the team  narrow loss.
 Mariota  effort in the final Thursday Night Football game of the season gave the impression that he would again be able to handle the spotlight if need be. But, considering the stakes of this game, having Carr back under center is a sight Gruden most likely wants to see come Saturday.",
-image: 'https://static.www.nfl.com/image/private/t_editorial_landscape_8_desktop_mobile/league/p8pdzw5k9odpaoizbbhg.jpg')
+image: 'https://static.www.nfl.com/image/private/t_editorial_landscape_8_desktop_mobile/league/p8pdzw5k9odpaoizbbhg.jpg',
+category_id:3)
 
 Article.create(
 author_id:4,
@@ -74,7 +78,8 @@ I think in this case, this is one of those where I can honestly say that Josh is
 There was a hole at first base following a season in which the position was manned by committee. Howie Kendrick announced his retirement on Monday, while Asdrúbal Cabrera and Eric Thames are free agents. Ryan Zimmerman, who was part of the Nats’ plan at first before he elected not to play in 2020, also is a free agent.
 It remains to be seen how Washington will back up the first base position. Last season, Bell started 35 games there, where his fielding percentage dipped to .984. He DH would his other 21 games.
 Bell already received a welcome from the Nationals on social media. Trea Turner tweeted his excitement shortly after the trade was announced. Bell joins another Josh on the Nationals -- former Pirates teammate Josh Harrison.",
-image:'https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/magp9osvkzal3qw9akkq')
+image:'https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/magp9osvkzal3qw9akkq',
+category_id:4)
 
 
 Article.create(
@@ -87,7 +92,8 @@ The NHL season is scheduled to open Jan. 13 with five games, including the Vanco
 The Boston Bruins, Buffalo Sabres, New Jersey Devils, New York Islanders, New York Rangers, Philadelphia Flyers, Pittsburgh Penguins and Washington Capitals will play in the East Division.
 The Carolina Hurricanes, Chicago Blackhawks, Columbus Blue Jackets, Dallas Stars, Detroit Red Wings, Florida Panthers, Nashville Predators and Tampa Bay Lightning will compete in the Central Division.
 The Anaheim Ducks, Arizona Coyotes, Colorado Avalanche, Los Angeles Kings, Minnesota Wild, San Jose Sharks, St. Louis Blues and Vegas Golden Knights will be in the West Division.",
-image:'https://cms.nhl.bamgrid.com/images/photos/319886550/1024x576/cut.jpg')
+image:'https://cms.nhl.bamgrid.com/images/photos/319886550/1024x576/cut.jpg',
+category_id:5)
 
 Article.create(
 author_id:1,
@@ -104,7 +110,8 @@ Manchester City have the same schedule -- albeit kicking off at 8 p.m. GMT on bo
 It is two games in two days, 48 hours, Lampard told a news conference. I am not trying to be clever, it is an important point for us, because there are other teams that are challenging at the top of the league that play two games in three days.
 
 And I know clearly what happened with this one as well. The game are being broadcast live as they all are now. We play Arsenal on Boxing Day and our game with Man City now has been pushed to the Sunday (Jan. 3). So the schedule meant that we couldn't play and Aston Villa also wanted to play on the Tuesday, they wanted an extra day, and so did we. But we got overruled by both the Premier League and the broadcasters.",
-image: 'https://i2-prod.football.london/incoming/article17030576.ece/ALTERNATES/s1200c/0_Chelsea.jpg')
+image: 'https://i2-prod.football.london/incoming/article17030576.ece/ALTERNATES/s1200c/0_Chelsea.jpg',
+category_id:1)
 
 Article.create(
 author_id:2,
@@ -122,7 +129,8 @@ Obviously Chelsea always have a great squad of great players, Arteta said. The t
 In this moment, you are probably talking about the strongest squad in the Premier League. They are doing a really good job, Frank [Lampard] is doing a really good job. He's got a team full of belief and confidence, and even though they had some defeats, they got back to winning on Monday [beating West Ham 3-0] and it's a team that is going to be fighting for the top spot in the league for sure.
 
 I would not like to compare them with Arsenal. What they did seems to be working fine and at the moment we are not there.",
-image: 'https://e0.365dm.com/20/03/2048x1152/skysports-arsenal-olympiakos_4944696.jpg')
+image: 'https://e0.365dm.com/20/03/2048x1152/skysports-arsenal-olympiakos_4944696.jpg',
+category_id:1)
 
 
 Article.create!(
@@ -136,7 +144,8 @@ Friday was the first of those games in the Super Bowl era and, incidentally, the
 He is the best running back in the league, Saints center Erik McCoy told reporters afterward. There is not much else to say about it.
 For a moment, it looked like Kamara would fall one score short.
 He became the first player in seven years with five touchdowns, and the first in 17 years to gain all of them on the ground, when he scampered in from 7 yards out early in the fourth quarter. But with just four minutes remaining, Kamara watched from the sideline as Taysom Hill entered the game and ran it in from the 1-yard line.",
-image: 'https://d2u0l2ivr9qcwr.cloudfront.net/webroot/files/articles/94618/NFL_Saints_Alvin_Kamara_Cesar_Ruiz_2020_USA_615x458.jpg')
+image: 'https://d2u0l2ivr9qcwr.cloudfront.net/webroot/files/articles/94618/NFL_Saints_Alvin_Kamara_Cesar_Ruiz_2020_USA_615x458.jpg',
+category_id:3)
 
 Article.create!(
 author_id:4,
@@ -146,7 +155,8 @@ So we are here to serve Major League teams and free agents at this still-unsettl
 J.T. Realmuto and the Phillies
 Yeah, it is complicated. The Phillies financial picture looks a lot different today than it did at the time of the Bryce Harper signing. They are trying to lower a payroll that neared the luxury tax threshold in 2020, and they have needs other than just catcher. But we’re not here to figure all of that out. We’re here to point out the obvious, which is that the Plan B's here aren’t palatable, particularly given what the Phillies gave up (Sixto Sanchez) to get Realmuto in the first place. There are other teams that could stand to upgrade at catcher, but none with the emotional attachment that the Phillies have. Losing him would greatly compromise their competitive effort for 2021.
 Dave Dombrowski on Realmuto",
-image: 'https://cdn.mlbtraderumors.com/files/2020/11/Top50FreeAgents_1024-1024x512.jpg')
+image: 'https://cdn.mlbtraderumors.com/files/2020/11/Top50FreeAgents_1024-1024x512.jpg',
+category_id:4)
 
 Article.create(
 author_id:5,
@@ -157,7 +167,8 @@ The 868-game regular-season schedule - 56 games per team - will conclude Saturda
 A complete listing of each team's 2020-21 regular-season opening game is below and the complete 2020-21 regular-season schedule is attached. Start times and broadcast details for all games will be announced when available. 
 As previously announced, in reaching agreement on the format for the 2020-21 season, the NHL and NHLPA determined that the ongoing closure of the U.S.-Canada border required realignment and the League and the Players also sought to minimize team travel as much as possible by shifting to exclusively intradivisional play. It is the current plan to play games in the home arenas of participating teams while understanding that most arenas will not, at least in the initial part of the season, be able to host fans. However, depending on prevailing conditions both in local markets and across North America, the League will be prepared to play games in one or more neutral site venues per division should it become necessary. Each team in the East, Central and West divisions will play every other team in its division eight times while each team in the North Division will play every other team in its division nine or 10 times. 
 The top four teams in each division will qualify for the Stanley Cup Playoffs, with intradivisional play in the first two rounds 1 vs. 4; 2 vs. 3. The four teams that advance to the Semifinal Round would be seeded by their regular season points total, with the No. 1 seed playing the No. 4 seed in one series and the No. 2 and No. 3 seeds meeting in the other. Formal training camps will begin on Jan. 3. There will be no pre-season games. The seven teams that did not participate in the 2019-20 Return to Play will be permitted to open their training camps as early as Dec. 31. ",
-image: 'https://cms.nhl.bamgrid.com/images/photos/319875658/1024x576/cut.jpg')
+image: 'https://cms.nhl.bamgrid.com/images/photos/319875658/1024x576/cut.jpg',
+category_id:5)
 
     puts "Articles created #{Article.all.count}"
 
