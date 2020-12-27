@@ -18,7 +18,10 @@
 
   <div class="field form-group">
     <% form.label :image %>
-    <%= form.text_area :image,class:"form-control",placeholder:"Image" %>
+    <%= form.text_area :image,class:"form-control",placeholder:"Please provide a url for the image field" %>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Please provide a url for the image.">
+      Click me for the image
+    </button>
   </div>
 
     <div class="field form-group">
