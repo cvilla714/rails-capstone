@@ -9,6 +9,8 @@ class Article < ApplicationRecord
   validates :body, length: { maximum: 5000 }
   validates :title, :body, :image, presence: true
 
+  scope :most_recents, ->{includes(:likes).order(created_at: :desc)}
+
   def self.most_likes
     if !Like.all.blank?
       main = joins(:likes).group(:article_id).count.max_by do |_s, l|
@@ -22,7 +24,7 @@ class Article < ApplicationRecord
     end
   end
 
-  def self.most_recents
-    Article.order(created_at: :desc)
-  end
+  # def self.most_recents
+    # Article.order(created_at: :desc)
+  # end
 end
