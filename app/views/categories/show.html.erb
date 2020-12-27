@@ -14,8 +14,6 @@
 <%= link_to 'Back', categories_path %>
 
 <ul>
-  <%# @most_recent_article.inspect %>
-  <%# @most_recent_article[-1].title %>
   <%=link_to @most_recent_article[-1].title,article_path(@most_recent_article[-1].id) %>
 </ul>
         
@@ -32,7 +30,6 @@
         <h5 class="card-title"><%= art.title %></h5>
         <p class="card-text"><%= truncate(art.body, length: 200) %></p>
         <p class="card-text"><small class="text-muted"><%= link_to 'Read More',article_path(art.id) %> </small></p>
-        <%# render 'show_links',article: art %>
         <%= edit_content(art) %>
       </div>
     </div>

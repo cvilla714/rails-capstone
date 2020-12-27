@@ -1,0 +1,72 @@
+<% if @articles.empty? %>%
+  <p>please create a new article</p>
+<% else %>
+ <div class="jumbotron bg-warning">
+    <h1 class="display-4 text-center" >Articles</h1>
+      <div class="text-center">
+        <img  src='<%= @most_likes.image %>' /> <br>
+      </div>
+    <hr class="my-4">
+      <div class="text-center">
+        <%=link_to @most_likes.title,article_path(@most_likes.id) %>
+      </div>
+
+    <div class="card-deck">
+      
+      <div class="card">
+       <h1 class="text-center"><%= soccer_category.name %></h1>
+         <img src='<%= soccer_category.most_recent_article[0].image %>' />
+        <div class="card-body">
+          <%=link_to soccer_category.most_recent_article[0].title,article_path(soccer_category.most_recent_article[0].id) %>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Published <%= distance_of_time_in_words(soccer_category.most_recent_article[0].created_at,Time.now)%></small>
+        </div>
+      </div>
+
+      <div class="card">
+        <h1 class="text-center"><%= nba_category.name %></h1>
+          <img src='<%= nba_category.most_recent_article[-1].image %>' />
+          <div class="card-body">
+            <%=link_to nba_category.most_recent_article[-1].title,article_path(nba_category.most_recent_article[-1].id) %>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Published <%= distance_of_time_in_words(nba_category.most_recent_article[-1].created_at,Time.now)%></small>
+          </div>
+      </div>
+     
+     <div class="card">
+        <h1 class="text-center"><%= nfl_category.name %></h1>
+          <img src='<%= nfl_category.most_recent_article[-1].image %>' />
+          <div class="card-body">
+            <%=link_to nfl_category.most_recent_article[-1].title,article_path(nfl_category.most_recent_article[-1].id) %>
+          </div>
+          <div class="card-footer">
+              <small class="text-muted">Published <%= distance_of_time_in_words(nfl_category.most_recent_article[-1].created_at,Time.now)%></small>
+          </div>
+      </div>
+
+      <div class="card">
+         <h1 class="text-center"><%= mlb_category.name %></h1>
+          <img src='<%= mlb_category.most_recent_article[-1].image %>' />
+          <div class="card-body">
+            <%=link_to mlb_category.most_recent_article[-1].title,article_path(mlb_category.most_recent_article[-1].id) %>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Published <%= distance_of_time_in_words(mlb_category.most_recent_article[-1].created_at,Time.now)%></small>
+          </div>
+      </div>
+      
+      <div class="card">
+        <h1 class="text-center"><%= nhl_category.name %></h1>
+          <img src='<%= nhl_category.most_recent_article[-1].image %>' />
+        <div class="card-body">
+          <%=link_to nhl_category.most_recent_article[-1].title,article_path(nhl_category.most_recent_article[-1].id) %>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Published <%= distance_of_time_in_words(nhl_category.most_recent_article[-1].created_at,Time.now)%></small>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
