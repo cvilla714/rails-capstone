@@ -32,6 +32,8 @@ class ArticlesController < ApplicationController
     @article.title = article_params[:title]
     @article.body = article_params[:body]
     @article.image = article_params[:image]
+    @category = category_params[:id]
+    @article.categories = article.category_ids
     respond_to do |format|
       if @article.save
         add_categories
