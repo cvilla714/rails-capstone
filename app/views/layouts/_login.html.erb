@@ -1,8 +1,16 @@
 <% if current_user.is_a?(User) %>
-  <li class="nav-item">
-    <%= link_to 'Add Article',new_article_path, class:"nav-link" %>
-  </li>
-  <li class="nav-item">
-    <%= link_to 'Add Category',new_category_path,class:"nav-link" %>
-  </li>
+  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          My Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to 'Add Article',new_article_path, class:"nav-link" %>
+          <%= link_to 'Add Category',new_category_path,class:"nav-link" %>
+          <%= link_to 'Edit My Account',edit_user_registration_path,class:"nav-link" %>
+          <%= link_to 'Show all users',users_path,class:"nav-link" %>
+          <%= link_to 'Show all Categories',categories_path,class:"nav-link" %>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
 <% end %>
