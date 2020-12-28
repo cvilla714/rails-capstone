@@ -22,6 +22,6 @@ module ArticlesHelper
   def edit_content(article)
     return ' ' unless current_user.id == article.author_id
 
-    render 'categories/show_links',  article:article
-    end
+    render 'categories/show_links', article: article
+  end
 end
