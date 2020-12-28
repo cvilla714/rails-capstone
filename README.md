@@ -7,6 +7,7 @@
 > create their own articles as well and add categories to add value to the app.
 
 ![screenshot](./app_screenshot.png)
+![screenshot](./app/assets/images/erd.png)
 
 Additional description about the project and its features.
 
