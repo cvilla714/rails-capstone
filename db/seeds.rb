@@ -14,11 +14,11 @@ User.create(email:"robin@onepiece.com",name:"robin",password:"password")
 
 puts "users created #{User.all.count}"
 
-Category.create(name:"Soccer News",priority:1)
+Category.create(name:"Soccer Headlines",priority:1)
 Category.create(name:"NBA Headlines",priority:3)
 Category.create(name:"NFL Top-Stories",priority:5)
 Category.create(name:"MLB Lates-News",priority:7)
-Category.create(name:"NHL News",priority:9)
+Category.create(name:"NHL Top News",priority:9)
 
 puts "Categories created #{Category.all.count}"
 

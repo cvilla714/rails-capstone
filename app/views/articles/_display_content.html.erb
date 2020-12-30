@@ -11,10 +11,10 @@
         <%=link_to @most_likes.title,article_path(@most_likes.id) %>
       </div>
 
-    <div class="card-deck">
+    <div class="card-deck h-600">
       
       <div class="card">
-       <h1 class="text-center"><%= soccer_category.name %></h1>
+       <h1 class="text-center new-h1"><%= soccer_category.name %></h1>
          <img src='<%= soccer_category.most_recent_article[0].image %>' />
         <div class="card-body">
           <%=link_to soccer_category.most_recent_article[0].title,article_path(soccer_category.most_recent_article[0].id) %>
@@ -25,7 +25,7 @@
       </div>
 
       <div class="card">
-        <h1 class="text-center"><%= nba_category.name %></h1>
+        <h1 class="text-center new-h1"><%= nba_category.name %></h1>
           <img src='<%= nba_category.most_recent_article[-1].image %>' />
           <div class="card-body">
             <%=link_to nba_category.most_recent_article[-1].title,article_path(nba_category.most_recent_article[-1].id) %>
@@ -36,7 +36,7 @@
       </div>
      
      <div class="card">
-        <h1 class="text-center"><%= nfl_category.name %></h1>
+        <h1 class="text-center new-h1"><%= nfl_category.name %></h1>
           <img src='<%= nfl_category.most_recent_article[-1].image %>' />
           <div class="card-body">
             <%=link_to nfl_category.most_recent_article[-1].title,article_path(nfl_category.most_recent_article[-1].id) %>
@@ -47,7 +47,7 @@
       </div>
 
       <div class="card">
-         <h1 class="text-center"><%= mlb_category.name %></h1>
+         <h1 class="text-center new-h1"><%= mlb_category.name %></h1>
           <img src='<%= mlb_category.most_recent_article[-1].image %>' />
           <div class="card-body">
             <%=link_to mlb_category.most_recent_article[-1].title,article_path(mlb_category.most_recent_article[-1].id) %>
@@ -58,7 +58,7 @@
       </div>
       
       <div class="card">
-        <h1 class="text-center"><%= nhl_category.name %></h1>
+        <h1 class="text-center new-h1"><%= nhl_category.name %></h1>
           <img src='<%= nhl_category.most_recent_article[-1].image %>' />
         <div class="card-body">
           <%=link_to nhl_category.most_recent_article[-1].title,article_path(nhl_category.most_recent_article[-1].id) %>
