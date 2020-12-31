@@ -34,11 +34,25 @@ img {
   height: 50vh;
 }
 
-.h-600 {
-  height: 620px;
-}
-
 .new-h1{
   font-size: 1.7rem;
 
+}
+
+@media (min-width: 320px){
+  .h-600 {
+    height: 700px;
+  }
+}
+
+@media (min-width: 1024px){
+  .h-600 {
+    height: 615px;
+  }
+}
+
+@media (min-width: 1440px){
+  .h-600 {
+    height: 470px;
+  }
 }
