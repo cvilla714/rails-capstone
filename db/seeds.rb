@@ -135,16 +135,18 @@ category_id:1)
 
 Article.create!(
 author_id:3,
-title:"Saints RB Alvin Kamara ties NFL record with 6 rushing TDs",
-body:"Alvin Kamara was selected to his fourth consecutive Pro Bowl earlier this week. The NFCs starting running back nod went to Friday opponent Dalvin Cook﻿, however. Perhaps, Kamara took that personally.
-The Saints star tied an NFL record with six rushing touchdowns in a 52-33 win over the Vikings on Christmas Day.
-The historic performance, which helped New Orleans claim its fourth consecutive NFC South title and might decide some fantasy football championships as well, offered several reasons to celebrate.
-Kamaras epic rushing output matched Hall of Famer Ernie Nevers of the Chicago Cardinals in 1929. It was just the third instance of a player scoring six TDs from scrimmage (Dub Jones, Browns, 1951) and the fourth including six TDs overall (﻿Gale Sayers﻿, Bears, 1965).
-Friday was the first of those games in the Super Bowl era and, incidentally, the only one to not involve the Bears.
-He is the best running back in the league, Saints center Erik McCoy told reporters afterward. There is not much else to say about it.
-For a moment, it looked like Kamara would fall one score short.
-He became the first player in seven years with five touchdowns, and the first in 17 years to gain all of them on the ground, when he scampered in from 7 yards out early in the fourth quarter. But with just four minutes remaining, Kamara watched from the sideline as Taysom Hill entered the game and ran it in from the 1-yard line.",
-image: 'https://d2u0l2ivr9qcwr.cloudfront.net/webroot/files/articles/94618/NFL_Saints_Alvin_Kamara_Cesar_Ruiz_2020_USA_615x458.jpg',
+title:"
+Russell Wilson trade rumors
+",
+body:"
+If the Houston Texans reportedly won't listen to trade inquiries regarding star quarterback Deshaun Watson, 
+it's a safe bet that the Seattle Seahawks won't be in a hurry to field calls about Russell Wilson. 
+Or is it? Hours after The Athletic reported that Wilson's relationship with his one and only NFL team has become 
+increasingly rocky -- to the point Wilson's camp apparently even discussed potential trade destinations with Seattle -- 
+the quarterback's agent identified to ESPN four different teams Wilson would be comfortable playing for in the event 
+of a future deal: the Bears, Cowboys, Raiders and Saints.
+",
+image: 'https://sportshub.cbsistatic.com/i/r/2020/07/03/4d70a072-6187-4cde-9d2d-c1bf53c7b2ce/thumbnail/770x433/4f6a28f284193daa40e6af82649546b6/russell-wilson-seahawks.jpg',
 category_id:3)
 
 Article.create!(
