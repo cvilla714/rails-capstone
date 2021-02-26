@@ -1,0 +1,26 @@
+<div class="container">
+<div class="card">
+  <div class="card-header bg-info">
+    <h1 class="text-center">New Category</h1>
+  </div>
+  <div class="card-body">
+    <%= form_with(model: category, local: true) do |form| %>
+      <%= render 'display_errors' %>
+
+  <div class="field form-group"">
+    <% form.label :name %>
+    <%= form.text_field :name,class:"form-control",placeholder:"Name" %>
+  </div>
+
+  <div class="field form-group"">
+    <% form.label :priority %>
+    <%= form.number_field :priority,class:"form-control",placeholder:"Prioritye" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-info" %>
+  </div>
+<% end %>
+  </div>
+</div>
+</div>

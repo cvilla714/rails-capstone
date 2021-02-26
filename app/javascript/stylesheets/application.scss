@@ -1,0 +1,57 @@
+@import "~bootstrap/scss/bootstrap";
+@import "@fortawesome/fontawesome-free";
+
+body {
+  background-color: rgb(78, 67, 61);
+}
+
+img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.logo {
+  width: 100px;
+}
+
+.inside {
+  width: 100%;
+  height: 160%;
+  object-fit: cover;
+}
+
+.artimg {
+  overflow: hidden;
+}
+
+.main {
+  background-color: rgb(255, 255, 255);
+}
+
+.forms {
+  width: 50vw;
+  height: 50vh;
+}
+
+.new-h1 {
+  font-size: 1.7rem;
+}
+
+@media (min-width: 320px) {
+  .h-600 {
+    height: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .h-600 {
+    height: 615px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .h-600 {
+    height: 470px;
+  }
+}

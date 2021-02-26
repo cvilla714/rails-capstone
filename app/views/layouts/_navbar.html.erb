@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light main">
+<div class="logo"><%= image_tag 'sports_info.png',width:100,alt:"Sports Info" %></div>
+ 
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    <ul class="navbar-nav mx-auto">
+    
+      <li class="nav-item active">
+        <%= link_to 'Home',root_path,class:"nav-link active"%>
+      </li>                
+
+       <%= render :partial=> 'layouts/login' %>
+       
+        <% category_list.each do |cate| %>
+          <li class="nav-item active">
+        <%= link_to cate.name, category_path(cate.id), class:"nav-link active" %>
+        </li>
+        <% end %>
+    </ul>
+      
+      <ul class="navbar-nav ml-auto">
+      <%= render :partial=> 'layouts/logout' %>
+      </ul>
+  </div>
+</nav>

@@ -1,0 +1,22 @@
+<div class="container">
+<h1 class="text-center text-primary">Users</h1>
+
+<table class="table text-center table-striped table-bordered table-hover main">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+</div>

@@ -1,0 +1,6 @@
+<% if current_user.is_a?(User) %>
+    <%= link_to 'Show', article %>
+    <%= link_to 'Edit', edit_article_path(article) %>
+    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= like_or_dislike_btn(article) %>
+<% end %>

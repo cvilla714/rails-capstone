@@ -1,0 +1,40 @@
+<div class="container">
+<div class="card form">
+  <div class="card-header bg-info">
+    <h1 class="text-center">New Article</h1>
+  </div>
+  <div class="card-body">
+  <%= form_with(model: article, local: true) do |form| %>
+  <%= render 'errors' %>
+
+  <div class="field form-group">
+    <% form.label :title %>
+    <%= form.text_field :title,class:"form-control",placeholder:"Title" %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :body %>
+    <%= form.text_area :body,class:"form-control",placeholder:"Body" %>
+  </div>
+
+  <div class="field form-group">
+    <% form.label :image %>
+    <%= form.text_area :image,class:"form-control",placeholder:"Please provide a url for the image field" %>
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Please provide a url for the image.">
+      Click me for the image
+    </button>
+  </div>
+
+    <div class="field form-group">
+    <%= form.label :category_id%>
+    <%= form.select(:categories, @categories.collect {|p| [ p.name, p.id ] }, 
+                                           { :prompt => "Please select"}, 
+                                           { :multiple => true, :size => 5,class:"form-control" }) %>
+      </div>
+  <div class="actions">
+    <%= form.submit class:"btn btn-info" %>
+  </div>
+<% end %>
+  </div>
+</div>
+</div>
