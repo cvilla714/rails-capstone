@@ -2,9 +2,11 @@
 
 # Rails Capstone Project
 
-> This project was about creating Sports Article App,where the users will have the choice to select from
+> This project was about creating a Sports Article App, where the users will have the choice to select from
 > several categories and get articles that are making references to the respective categories. The user can
-> create their own articles as well and add categories to add value to the app.
+> create their articles as well and add categories to add value to the app.
+> It features on the main page the article with the most likes
+> And each card displays the most recent article and the corresponding picture.
 
 ![screenshot](./app_screenshot.png)
 ![screenshot](./app/assets/images/erd.png)
