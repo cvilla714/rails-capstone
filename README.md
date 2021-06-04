@@ -22,7 +22,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://morning-island-07101.herokuapp.com/)
+[Live Demo Link](https://enigmatic-bastion-06146.herokuapp.com/)
 
 ## Getting Started
 
