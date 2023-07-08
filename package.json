@@ -5,6 +5,9 @@
     "node": "14.18.2",
     "yarn": "1.22.19"
   },
+  "scripts": {
+    "heroku-postbuild": "webpack"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@rails/actioncable": "^6.0.0",
