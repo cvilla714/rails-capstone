@@ -6,7 +6,8 @@
     "yarn": "1.22.19"
   },
   "scripts": {
-    "heroku-postbuild": "yarn add webpack webpack-cli"
+    "heroku-postbuild": "yarn add webpack webpack-cli",
+    "webpack": "webpack"        
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
