@@ -2,22 +2,18 @@ require 'rails_helper'
 
 RSpec.describe ArticleCategory, type: :model do
   describe 'validation' do
-    it 'should not create the articlecategory' do
-      expect(ArticleCategory.create(article_id: 1)).to_not be_valid
+    let!(:author) { User.create(name: 'John Doe') }
+    let!(:article) do
+      Article.create(title: 'all the way', body: 'making it count', image: 'myurl', category_id: 2, author:)
     end
-  end
-end
+    let!(:category) { Category.create(name: 'NBA Headlines', priority: 7) }
 
-RSpec.describe ArticleCategory, type: :model do
-  describe 'validation' do
-    let(:article) do
-      Article.create(id: 3, title: 'all the way', body: 'making it count', image: 'myurl', category_id: 2, author_id: 3)
+    it 'should not create the articlecategory' do
+      expect(ArticleCategory.create(article:)).not_to be_valid
     end
-    let(:category) { Category.create(id: 5, name: 'NBA Headlines', priority: 7) }
+
     it 'should create the articlecategory' do
-      article.save
-      category.save
-      expect(ArticleCategory.create(article_id: 3, category_id: 5)).to be_valid
+      expect(ArticleCategory.create(article:, category:)).to be_valid
     end
   end
 end
