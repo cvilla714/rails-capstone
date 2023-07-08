@@ -37,8 +37,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Ruby:2.7
-- Rails: 6.0.3.4
+- Ruby:3.1.0
+- Rails: 7.0.4
 - PostgreSQL: 12.5
 
 ### Install
