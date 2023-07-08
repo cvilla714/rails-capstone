@@ -35,7 +35,7 @@ To get a local copy up and running follow these simple example steps.
 - this will get you in the directory where the app is.
 - Please follow the setup and install sections to get the app working
 
-### Prerequisites
+### Prerequisites.This project was upgraded to use Ruby 3.1.0 and Rails 7.0.4
 
 - Ruby:3.1.0
 - Rails: 7.0.4
