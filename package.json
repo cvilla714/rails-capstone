@@ -2,7 +2,7 @@
   "name": "Capstone",
   "private": true,
   "engines": {
-    "node": "14.18.2",
+    "node": "16.x",
     "yarn": "1.22.19"
   },
   "scripts": {
