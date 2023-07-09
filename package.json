@@ -1,26 +1,17 @@
 {
   "name": "Capstone",
   "private": true,
-  "engines": {
-    "node": "16.x",
-    "yarn": "1.22.19"
-  },
-  "scripts": {
-    "heroku-postbuild": "yarn add webpack webpack-cli",
-    "webpack": "webpack"        
-  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "^5.4.3",
+    "@rails/webpacker": "4.3.0",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
-    "turbolinks": "^5.2.0",
-    "webpack": "^5.88.1",
-    "webpack-cli": "^5.1.4"
+    "sass": "^1.63.6",
+    "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {

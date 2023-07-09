@@ -35,9 +35,9 @@ To get a local copy up and running follow these simple example steps.
 - this will get you in the directory where the app is.
 - Please follow the setup and install sections to get the app working
 
-### Prerequisites.This project was upgraded from ruby 2.7.0 and rails 6.0.3 to to use Ruby 3.1.0 and Rails 7.0.4
+### Prerequisites.This project was upgraded from ruby 2.7.0 and rails 6.0.3 to to use Ruby 3.0.6 and Rails 7.0.4
 
-- Ruby:3.1.0
+- Ruby:3.0.6
 - Rails: 7.0.4
 - PostgreSQL: 12.5
 
