@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: Capstone_production
-  username: Capstone
+  database: rails-capstone-dev-database
+  username: <%= ENV['CAPSTONE_DATABASE_USERNAME'] %>
   password: <%= ENV['CAPSTONE_DATABASE_PASSWORD'] %>
+  host: <%= ENV['CAPSTONE_DATABASE_HOST'] %>
+  port: <%= ENV['CAPSTONE_DATABASE_PORT'] %>
