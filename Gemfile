@@ -14,7 +14,7 @@ gem 'rubocop'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'webpacker'
+gem 'webpacker', '5.4.4'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
