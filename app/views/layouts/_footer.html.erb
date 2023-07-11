@@ -13,8 +13,11 @@
         <a class="nav-link" href="#">Terms and Conditions</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Copyright 2020. All rights reserved</a> 
-    </li>
+        <a class="nav-link" href="#">
+          <% current_year = Time.now.year %>
+          &copy; <%= current_year %>. All rights reserved
+        </a>
+      </li>
     </ul>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
