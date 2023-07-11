@@ -29,6 +29,6 @@
     "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
-    "build": "webpack --mode production"
+    "assets:precompile": "webpack --mode production"
   }
 }
