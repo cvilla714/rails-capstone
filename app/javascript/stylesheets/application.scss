@@ -1,5 +1,6 @@
-@import "bootstrap/scss/bootstrap";
-@import "@fortawesome/fontawesome-free";
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
 
 body {
   background-color: rgb(78, 67, 61);
