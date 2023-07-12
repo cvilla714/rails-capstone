@@ -1,10 +1,8 @@
 @import "bootstrap/scss/bootstrap";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 
-
-
 body {
-  background-color: rgb(78, 67, 61);
+  background-color: rgb(78 67 61);
 }
 
 img {
@@ -28,7 +26,7 @@ img {
 }
 
 .main {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255 255 255);
 }
 
 .forms {
@@ -40,19 +38,19 @@ img {
   font-size: 1.7rem;
 }
 
-@media (min-width: 320px) {
+@media (320px <= width) {
   .h-600 {
     height: 700px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (1024px <= width) {
   .h-600 {
     height: 615px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (1440px <= width) {
   .h-600 {
     height: 470px;
   }

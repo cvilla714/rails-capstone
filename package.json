@@ -24,6 +24,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "postcss": "^8.4.19",
+    "postcss-scss": "^4.0.6",
     "stylelint": "^15.10.1",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-csstree-validator": "^3.0.0",
