@@ -24,6 +24,8 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@babel/plugin-transform-private-methods": "^7.22.5",
+    "@babel/plugin-transform-private-property-in-object": "^7.22.5",
     "postcss": "^8.4.19",
     "postcss-scss": "^4.0.6",
     "stylelint": "^15.10.1",
